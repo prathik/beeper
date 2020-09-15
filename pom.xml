@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>prathik</groupId>
-    <artifactId>beeper</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>etu</artifactId>
+    <version>1.0</version>
     <build>
         <plugins>
             <plugin>
@@ -25,7 +25,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>prathik.Main</mainClass>
+                            <mainClass>etu.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

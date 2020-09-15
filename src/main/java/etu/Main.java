@@ -1,4 +1,4 @@
-package prathik;
+package etu;
 
 import java.nio.file.Paths;
 import java.time.Duration;
@@ -14,7 +14,7 @@ public class Main {
 
     var future = executorService.scheduleWithFixedDelay(audioPlayer::play, 0, 3, TimeUnit.SECONDS);
 
-    Thread.sleep(Duration.ofMinutes(5).toSeconds());
+    Thread.sleep(Duration.ofMinutes(Integer.parseInt(args[0])).toMillis());
     future.cancel(true);
     executorService.shutdownNow();
     executorService.awaitTermination(1, TimeUnit.SECONDS);

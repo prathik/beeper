@@ -1,4 +1,4 @@
-package prathik;
+package etu;
 
 import javax.sound.sampled.LineEvent;
 import javax.sound.sampled.LineListener;

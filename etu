@@ -1,0 +1,2 @@
+#/usr/bin/java
+java -jar target/etu-1.0.jar "$@"

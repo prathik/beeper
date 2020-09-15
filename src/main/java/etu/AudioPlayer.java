@@ -1,4 +1,4 @@
-package prathik;
+package etu;
 
 import io.vavr.control.Try;
 import java.io.ByteArrayInputStream;
