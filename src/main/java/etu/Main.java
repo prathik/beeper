@@ -8,15 +8,15 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
 
-  public static void main(String[] args) throws InterruptedException {
-    AudioPlayer audioPlayer = new AudioPlayer(Paths.get("src/main/resources/output.wav"));
-    ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
+    public static void main(String[] args) throws InterruptedException {
+        AudioPlayer audioPlayer = new AudioPlayer(Paths.get("src/main/resources/output.wav"));
+        ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
 
-    var future = executorService.scheduleWithFixedDelay(audioPlayer::play, 0, 3, TimeUnit.SECONDS);
+        var future = executorService.scheduleWithFixedDelay(audioPlayer::play, 0, Integer.parseInt(args[1]), TimeUnit.SECONDS);
 
-    Thread.sleep(Duration.ofMinutes(Integer.parseInt(args[0])).toMillis());
-    future.cancel(true);
-    executorService.shutdownNow();
-    executorService.awaitTermination(1, TimeUnit.SECONDS);
-  }
+        Thread.sleep(Duration.ofMinutes(Integer.parseInt(args[0])).toMillis());
+        future.cancel(true);
+        executorService.shutdownNow();
+        executorService.awaitTermination(1, TimeUnit.SECONDS);
+    }
 }
